@@ -1,0 +1,199 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripMate</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <h2>✈️ TripMate</h2>
+
+        <button onclick="toggleDarkMode()" class="dark-btn">
+            🌙
+        </button>
+
+    </nav>
+
+
+
+    <!-- MAIN CONTAINER -->
+
+    <div class="container">
+
+        <!-- CREATE TRIP -->
+
+        <div class="card">
+
+            <h1>Create New Trip</h1>
+
+            <p class="subtitle">
+                Split expenses easily with friends
+            </p>
+
+            <input type="text"
+                id="trip-name"
+                placeholder="Trip Name">
+
+            <input type="text"
+                id="members-input"
+                placeholder="Trip Members with commas(i.e Priya,Sam,Alex)">
+
+            <button onclick="createTrip()" class="primary-btn">
+                Create Trip
+            </button>
+
+        </div>
+
+
+
+        <!-- DASHBOARD -->
+
+        <div id="dashboard" style="display:none;">
+
+            <div class="top-section">
+
+                <h1 id="trip-title"></h1>
+
+                <button onclick="openModal()" class="add-btn">
+                    + Add Expense
+                </button>
+
+            </div>
+
+
+
+            <!-- STATS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <span>Total Expense</span>
+                    <h2 id="total-expense">₹0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>Fair Share</span>
+                    <h2 id="fair-share">₹0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>Members</span>
+                    <h2 id="member-count">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>Expenses</span>
+                    <h2 id="expense-count">0</h2>
+                </div>
+
+            </div>
+
+
+
+            <!-- EXPENSE LIST -->
+
+            <div class="card">
+
+                <h3>Expenses</h3>
+
+                <div id="expense-list"></div>
+
+            </div>
+
+
+
+            <!-- SUMMARY -->
+
+            <div class="card">
+
+                <h3>Balance Summary</h3>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Member</th>
+                            <th>Paid</th>
+                            <th>Balance</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="summary-body"></tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- SETTLEMENT -->
+
+            <div class="card">
+
+                <h3>Settlement</h3>
+
+                <div id="settlement-list"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MODAL -->
+
+    <div class="modal-overlay" id="modal">
+
+        <div class="modal">
+
+            <h2>Add Expense</h2>
+
+            <input type="number"
+                id="expense-amount"
+                placeholder="Enter Amount">
+
+            <select id="payer-select"></select>
+
+            <input type="text"
+                id="category-select"
+                placeholder="Enter Category(i.eFood,Travel,Shopping)">
+
+            <div class="modal-buttons">
+
+                <button onclick="saveExpense()" class="primary-btn">
+                    Save
+                </button>
+
+                <button onclick="closeModal()" class="cancel-btn">
+                    Cancel
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
