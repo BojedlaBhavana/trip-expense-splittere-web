@@ -1,11 +1,31 @@
-<<<<<<< HEAD
-# tripmate-expense-splitter
-<<<<<<< HEAD
-project1
-=======
-TripMate is a responsive expense splitting web app that helps friends manage and settle trip expenses easily.
->>>>>>> eab039af09a67d0d351223d026c223afb42b3619
-=======
-# trip-expense-splittere-web
-Tripexpensesplitter is a responsive expense splitting web app that helps friends manage and settle trip expenses easily.
->>>>>>> e52b92e3dff51ae6c3e846a8578ce82cc6f453d3
+# Trip Expense Splitter
+
+A web application to split trip expenses among friends easily and fairly.
+
+## Features
+
+- Add trip members
+- Add expenses with payer details
+- Automatically calculate how much each person owes
+- Settle balances with minimal transactions
+
+## Tech Stack
+
+- HTML / CSS / JavaScript
+
+## How to Use
+
+1. Add all trip members
+2. Enter each expense and who paid
+3. View the split summary
+4. Settle up!
+
+## Getting Started
+
+Clone the repository:
+   git clone https://github.com/BojedlaBhavana/trip-expense-splittere-web.git
+
+Open `index.html` in your browser to run the app.
+
+Author:
+Bhavana Bojedla
