@@ -20,6 +20,10 @@ A web application to split trip expenses among friends easily and fairly.
 3. View the split summary
 4. Settle up!
 
+## 🌐 Live Demo
+
+[Click here to view the live project](https://trip-expense-splittere-web.vercel.app/)
+
 ## Getting Started
 
 Clone the repository:
