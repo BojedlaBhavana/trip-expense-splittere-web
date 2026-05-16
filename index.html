@@ -6,18 +6,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TripMate</title>
+    <title>TripExpenseSplitter</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- jsPDF AutoTable plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-
     <nav class="navbar">
 
         <h2>✈️ TripExpenseSplitter</h2>
@@ -50,7 +56,7 @@
 
             <input type="text"
                 id="members-input"
-                placeholder="Trip Members with commas(i.e Priya,Sam,Alex)">
+                placeholder="Type member names,separated by commas(i.e Priya,Sam etc..)">
 
             <button onclick="createTrip()" class="primary-btn">
                 Create Trip
@@ -152,6 +158,28 @@
 
             </div>
 
+
+
+            <!-- EXPORT BUTTONS -->
+
+            <div class="card export-card">
+
+                <h3>📤 Export & Share</h3>
+
+                <div class="export-buttons">
+
+                    <button onclick="downloadPDF()" class="export-btn pdf-btn">
+                        📄 Download PDF
+                    </button>
+
+                    <button onclick="shareWhatsApp()" class="export-btn whatsapp-btn">
+                        💬 Share on WhatsApp
+                    </button>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
@@ -174,7 +202,7 @@
 
             <input type="text"
                 id="category-select"
-                placeholder="Enter Category(i.eFood,Travel,Shopping)">
+                placeholder="Enter Category(i.e Food,Travel,Shopping etc..)">
 
             <div class="modal-buttons">
 
